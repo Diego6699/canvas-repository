@@ -7,13 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>canvas</title>
     <script>
+        let px=0;
+        let anima;
         function desenha(){
             var canvas = document.getElementById("canvas");
             var ctx = canvas.getContext("2d");
             
-            ctx.fillStyle = "#00f";
-            ctx.rect(0,0,100,100);
-            ctx.stroke();
+            ctx.fillStyle = "#f00";
+            px++;
+            anima.requestAnimationFrame(desenha);
 
         }
         
