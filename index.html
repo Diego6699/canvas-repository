@@ -14,22 +14,15 @@
     <script>
         canvas = document.getElementById("canvas");
         let ctx = canvas.getContext("2d");
-
-        let px=0;
-        let py = 10;
-        let dx = 1;
         let anima = window;
-        let l_Ret = a_Ret = 50;
-        let l_canvas = a_canvas = 500;
         function desenha(){
-            ctx.clearRect(0,0,500,500);
-            ctx.fillStyle = "#f00";
-            ctx.fillRect(px,py,l_Ret,a_Ret);
-            px+=dx;
-            if(px+l_Ret>=l_canvas ||px<=0){
-                dx*= -1;
-            }
-            anima.requestAnimationFrame(desenha);
+            ctx.fillStyle = 'blue';
+            ctx.arc(100,100,100,(Math.PI/180)*0,(Math.PI/180)*90,true);
+            ctx.fill();
+            ctx.beginPath();
+            ctx.fillStyle = 'red';
+            ctx.arc(100,100,100,(Math.PI/180)*0,(Math.PI/180)*90,false);
+            ctx.fill();
         }
         desenha();
     </script>
