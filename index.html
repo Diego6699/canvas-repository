@@ -9,6 +9,7 @@
 </head>
 
 <body>
+    <img src="./img/cores.jpg" width="150" height="50">
     <canvas id="canvas" width="500" height="500" style="border:1px solid black;">Seu browser não suporta canvas</canvas>
 
     <script>
@@ -16,8 +17,9 @@
         let ctx = canvas.getContext("2d");
 
         let nave = new Image();
-        nave.src = "./img/nav.jpg";
-        nave.addEventListener('load',()=>{ctx.drawImage(nave,0,0);})
+        nave.src = "./img/cores.jpg";
+        //imagem
+        nave.addEventListener('load',()=>{ctx.drawImage(nave,50,0,50,50,0,0,50,50);})
     </script>
 </body>
 
